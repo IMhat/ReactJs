@@ -1,5 +1,5 @@
 // import logo from #;
-import "./navBar.css";
+
 
 
 function navbar(){

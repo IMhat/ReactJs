@@ -11,7 +11,7 @@ function App() {
         
       </header>
 
-      <itemList greeting='contenedor'/>
+      
     </div>
   );
 }
