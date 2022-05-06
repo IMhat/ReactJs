@@ -1,9 +1,9 @@
-import { BsCart2 } from "react-icons/bs";
+import { Cart } from "../img/logo1.png";
 
 const CartWidget = () => {
 
     return (
-        <h3> <BsCart2/> </h3>
+        <h3> <Cart/> </h3>
     )
 }
 

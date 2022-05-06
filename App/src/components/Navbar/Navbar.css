@@ -2,18 +2,7 @@ img{
     width: 100px;
 }
 
-button{
-    padding: 9px 25px;
-    background-color: rgb(184, 184, 184);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
 
-button:hover{
-    background-color: #57c1ff;
-}
 
 li, a, button{
     
@@ -54,5 +43,18 @@ header{
     color: #57c1ff;    
 }
 
+
+button{
+    padding: 9px 25px;
+    background-color: rgb(184, 184, 184);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: #57c1ff;
+}
 
 
