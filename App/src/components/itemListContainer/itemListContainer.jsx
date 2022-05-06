@@ -6,7 +6,7 @@ const ItemListContainer = ({greeting="greeting"}) =>{
         alert("Hola")
     }
     return (
-        <div>
+        <div className="click">
             {greeting}
             <button onClick={saludoA}>Click</button>
         </div>
