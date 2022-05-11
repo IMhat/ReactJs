@@ -13,14 +13,14 @@ import ItemListContainer from './components/itemListContainer/itemListContainer'
 function App() {
 
   return (
-    <div className='App'>
-      <header>
+      <>
+        
         <Navbar/>
-      </header>
-
-      <ItemListContainer greeting='Container'/>
-
-    </div>
+        <ItemListContainer saludo={"Soy el componente contenedor"}/>
+        
+                  
+        
+      </>
   )
 
 }

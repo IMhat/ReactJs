@@ -5,22 +5,21 @@ import "./Navbar.css"
 
 function Navbar() {
     return(
-        <>
-        <img className="logo" src="{logo}" alt="logo" />
+        <div className="contNav">
+            <div className="navbar">
+                <img className="logo" src={logo} alt="logo"/>
 
-        <nav>
-            <ul className="Links">
-                <li> <a href="#">Home</a> </li>
-                <li> <a href="#">Products</a> </li>
-                <li> <a href="#">FAQ</a> </li>
-
-            </ul>
-        </nav>
-
-        <CartWidget/>
+                <ul className="navLinks">
+                    <li> <a href="#">Home</a></li>
+                    <li> <a href="#">Products</a></li>
+                    <li> <a href="#">FAQ</a></li>
+                    <a  href="#"><button className="bNeon">Contact</button></a>
+                </ul>
+                <CartWidget/>
 
 
-        </>
+            </div>
+    </div>
     )
 }
 

@@ -1,16 +1,13 @@
+import { ItemCount  } from "../ItemCount/ItemCount"
 
-
-const ItemListContainer = ({greeting="greeting"}) =>{
-
-    function saludoA(){
-        alert("Hola")
-    }
-    return (
-        <div className="click">
-            {greeting}
-            <button onClick={saludoA}>Click</button>
+const ItemListContainer = ({saludo="saludo"})=>{
+   
+    return(
+        <div>
+            {saludo}
+            
+            <ItemCount initial={1} stock={5} onAdd={(quantity)=>alert(`${quantity} productos`)}/>  
         </div>
     )
 }
-
 export default ItemListContainer
