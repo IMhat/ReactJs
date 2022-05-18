@@ -1,10 +1,14 @@
-import  Cart  from "../img/logo1.png";
+import { BsCart2 } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import "./CartWidget.css"
 
 const CartWidget = () => {
 
-    return (
-        <img src= {Cart} alt="" />
-    )
+  return (
+    <Link to="/cart">
+      <li className="a bCarrito"><BsCart2/></li>
+    </Link>
+  )
 }
 
 export default CartWidget
