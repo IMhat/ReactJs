@@ -5,11 +5,11 @@ import {getFetch} from '../helpers/getFetch'
 
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
-    const {id} = useParams()
     const [loader, setLoader] = useState(true)
-    
-    
 
+    
+    const {id} = useParams()
+    
     useEffect(()=>{
         getFetch(id)//fetch que llama a la api
             .then((res) => {setProduct(res)})
@@ -18,19 +18,23 @@ export const ItemDetailContainer = () => {
             
     },[])
 
-    
-
-
-    
     return(
         <div>
             {loader ?
-            <h2>Loading</h2>
-            :
-                <ItemDetail product = {product} />
+            <h2>Loading...</h2>
+            :    
+
+            <ItemDetail product = {product} />
+
             }
+        </div>
+        )
+    }
+    
+
+            
+            
+            
             
 
-        </div>
-    )
-}
+

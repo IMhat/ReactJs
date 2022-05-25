@@ -1,119 +1,117 @@
-img{
-    width: 100px;
+.capa{
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    top: 0;left: 0;
 }
-
-
-
-li, a, button{
-    
-    font-family: 'sans-serif';
-    font-weight: 500;
-    font-size: 17px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    
-
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    
-    
-}
-
-.logo{
-    cursor: pointer;
-}
-
-.Links{
-    list-style-type: none;
-}
-.Links li{
-    display: inline-block;
-    padding: 0px 20px;
-}
-.Links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.Links li a:hover {
-    color: #57c1ff;    
-}
-
-
-button{
-    padding: 9px 25px;
-    background-color: rgb(184, 184, 184);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover{
-    background-color: #57c1ff;
-}
-
-
-.contNav{
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-}
-
-.navbar{
-    width: 80%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.logo{
-    width: 130px;
-    cursor: pointer;
-    width: 50px;
-}
-
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-
-}
-
-.navbar ul li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.2rem;
-}
-
-.navbar ul li::before{
-    content: "";
-    height: 3px;
-    width: 0%;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    transition: 0.4s ease-out;
-}
-
-.navbar ul li:hover::before{
+/*Estilos para el encabezado*/
+.header{
     width: 100%;
+    height: 100px;
+    
+    top: 0;left: 0;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+}
+.container .btn-menu label{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo h1{
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
 
+.logo{
+    float: left;
+    width: 50px;
+    margin-left: 60px;
 }
 
 
 
 
 
+/*Menù lateral*/
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position:fixed;
+    width: 30%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #00c3ff;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    
+}
+/*Fin de Menù lateral*/
