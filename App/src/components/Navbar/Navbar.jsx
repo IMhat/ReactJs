@@ -32,9 +32,9 @@ function Navbar (){
                 <div className="cont-menu">
                     <nav>
                         <NavLink to = '/'>Inicio</NavLink>
-                        <NavLink to = '/category/remeras'>Remeras</NavLink>
-                        <NavLink to = '/category/camisas'>Camisas</NavLink>
-                        <NavLink to = '/category/pantalones'>Pantalones</NavLink>
+                        <NavLink to = '/category/remeras'>Tarjetas Graficas</NavLink>
+                        <NavLink to = '/category/camisas'>Procesadores</NavLink>
+                        <NavLink to = '/category/pantalones'>Gabinetes</NavLink>
                         <CartWidget/>
                     </nav>
                     <label htmlFor="btn-menu" className="icon-equis"><FiChevronLeft/></label>
