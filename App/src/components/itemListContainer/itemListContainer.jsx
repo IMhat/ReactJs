@@ -10,7 +10,17 @@ const ItemListContainer = ()=>{
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const {category} = useParams()    
+    const {category} = useParams()  
+    
+    
+
+    // useEffect(() =>{
+    //    const db = getFirestore()
+    //    const dbQuery = doc(db, 'items', 'rpioxMaGa9IRMoftfzJU')
+    //    getDoc(dbQuery)
+     //   .then(resp => setProducts( { id: resp.id, ...resp.data()} ))
+    // 
+    //}, [])
 
     useEffect(()=>{
         if(category){
@@ -39,5 +49,7 @@ const ItemListContainer = ()=>{
         </div>
     )
 }
+
+
 
 export default ItemListContainer
