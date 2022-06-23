@@ -1,13 +1,16 @@
-
 import {NavLink} from "react-router-dom";
-import CartWidget from "../CartWidget/CartWidget";
-import "./Navbar.css";
-import logo from '../../img/logo1.png'
 import { FiMenu } from "react-icons/fi";
 import { FiChevronLeft } from "react-icons/fi";
 
+import CartWidget from "../CartWidget/CartWidget";
+import logo from '/src/img/logo.jpg'
+
+import "./Navbar.css";
+
+
 
 function Navbar (){
+    
     return(
         <>
             <header className="header">
@@ -20,8 +23,8 @@ function Navbar (){
                     </div>
                         <nav className="menu">
                         <NavLink to = '/'>Inicio</NavLink>
-                        <NavLink to = '/'>Nosotros</NavLink>
-                        <NavLink to = '/'>Contacto</NavLink>
+                        <NavLink to = '/Contacto'>Contacto</NavLink>            
+                        <CartWidget /> 
                         </nav>
                 </div>
             </header>
@@ -31,16 +34,19 @@ function Navbar (){
             <div className="container-menu">
                 <div className="cont-menu">
                     <nav>
-                        <NavLink to = '/'>Inicio</NavLink>
+                    <NavLink to = '/'>Inicio</NavLink>
+                    <NavLink to = '/Contacto'>Contacto</NavLink>   
                         <NavLink to = '/category/TarjetasGraficas'>Tarjetas Graficas</NavLink>
                         <NavLink to = '/category/Procesadores'>Procesadores</NavLink>
                         <NavLink to = '/category/Gabinetes'>Gabinetes</NavLink>
-                        <CartWidget/>
+                        
+                        <CartWidget/> 
                     </nav>
                     <label htmlFor="btn-menu" className="icon-equis"><FiChevronLeft/></label>
                 </div>
             </div>
         </>
+    
     )
 }
 

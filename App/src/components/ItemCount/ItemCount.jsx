@@ -24,7 +24,7 @@ export function ItemCount({stock,initial,onAdd, handleInter}){
     }
 
     return(
-        <div>
+        <div className="divCount">
             <button  onClick={decrease}>-</button>
             <button  onClick={increase}>+</button>
             <p>{count}</p>

@@ -9,8 +9,8 @@ const Item = ({name, price,img,id}) =>{
         <Link to= {`/detail/${id}`} >
             <div className="card">
                 <img className="imgCard" src={img} alt="" />
-                <h3>{name}</h3>
-                <h6>${price}</h6>
+                <h3 className="nameCard">{name}</h3>
+                <h6 className="priceCard">${price}</h6>
                 <button className="bCard">Detalle</button>
             </div>
         </Link>

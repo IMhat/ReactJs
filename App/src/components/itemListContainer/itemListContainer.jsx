@@ -1,55 +1,51 @@
 import { useState,useEffect } from "react"
 import { useParams } from "react-router-dom"
-import "./ItemListContainer.css"
+import {collection, getDocs, getFirestore, query, where} from "firebase/firestore"
+
 import ItemList from "../ItemList/ItemList"
-import { getFetch } from "../helpers/getFetch"
 
 
 
 const ItemListContainer = ()=>{
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-
-    const {category} = useParams()  
     
     
+    const {category} = useParams()    
 
-    // useEffect(() =>{
-    //    const db = getFirestore()
-    //    const dbQuery = doc(db, 'items', 'rpioxMaGa9IRMoftfzJU')
-    //    getDoc(dbQuery)
-     //   .then(resp => setProducts( { id: resp.id, ...resp.data()} ))
-    // 
-    //}, [])
+
 
     useEffect(()=>{
-        if(category){
-            getFetch()
-                .then(resp => setProducts(resp.filter((prods)=>prods.category === category)))
-                .catch((err)=>console.log(err))
-                .finally (()=>setLoading(false))
-        }else{
-            getFetch()
-                .then(resp => setProducts(resp))
-                .catch((err)=>console.log(err))
-                .finally (()=>setLoading(false))
-
+        const db = getFirestore()
+        
+        const queryCollection = collection(db,"products")
+        const queryCollectionFilter = category ? query(queryCollection, where("category", "==" , category)):queryCollection
+        getDocs(queryCollectionFilter)
+            .then (resp => setProducts(resp.docs.map(product => ({ id:product.id, ...product.data() }))))
+            .catch((err)=>console.log(err))
+            .finally (()=>setLoading(false))           
+        
+}, [category])
+        
+return(
+    <div className="container">
+        {loading ?
+        <h2>Loading...</h2>
+        :
+        <ItemList products={products}/>
         }
-    }, [category])
-    
-      
-    return(
-
-        <div className="container">
-            {loading ?
-            <h2>Loading...</h2>
-            :
-            <ItemList products={products}/>
-            }
-        </div>
-    )
+    </div>
+)
 }
 
-
-
 export default ItemListContainer
+        
+                
+    
+
+    
+        
+
+
+    
+      

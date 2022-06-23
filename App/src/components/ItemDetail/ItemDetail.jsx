@@ -1,9 +1,11 @@
 
-import { ItemCount } from "../ItemCount/itemCount"
-import './ItemDetail.css'
 import { useState } from "react";
-import OptionButtons from "../OptionButtons";
+
+import { ItemCount } from "../ItemCount/itemCount"
+import OptionButtons from "./OptionButtons";
 import { useCartContext } from "../../Context/CartContext";
+
+import './ItemDetail.css'
 
 
 
@@ -18,15 +20,14 @@ const ItemDetail = ({product}) => {
   const {addCart, cartList} = useCartContext()
 
   function onAdd (quantity) {
-    console.log(`${quantity} ${product.name}`)
     addCart({...product, quantity})
   }
 
-  //console.log(cartList)
+  
  
   return (
     
-    <section className='container sproduct my-5 pt-5 me-5'>
+    <section className='container sProduct my-5 pt-5 me-5'>
      <div className='row mt-50'>
         <div className='col-lg-5 col-md-12 col-12'>
           <img className='img-fluid pb-1' src={product.img}  width={400} alt="" />
@@ -39,8 +40,9 @@ const ItemDetail = ({product}) => {
           <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Pariatur, doloremque quibusdam id iure assumenda natus voluptates
             culpa at unde quis illo. Dolores cum ea velit aspernatur dignissimos
-            reprehenderit? Consectetur, quisquam.
-  </span>
+            reprehenderit? Consectetur, quisquam.</span>
+          
+
           {
             inputType === 'button' ?
               <ItemCount 

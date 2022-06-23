@@ -6,15 +6,15 @@
     float: right;
     cursor: pointer;
     text-align: center;
-    background: rgb(70, 177, 240);
+    background: var(--bg-color-card);
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid #000000;
     transition: all .2s;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
-    box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, 0.2);
+    box-shadow: -12px 12px 2px -1px rgba(0, 0, 0, 0.2);
 }
 
 .imgCard{
@@ -26,12 +26,12 @@
     
 }
 
-h3{
+.nameCard{
     text-align: center;
     font-size: 28px;
     margin: 0;
-    padding-top: 10px;
-    color: black;
+    padding-top: 2rem;
+    color: var(--letra-color);
 }
 
 .gallery{
@@ -42,17 +42,13 @@ h3{
     margin: 50px 0;
 }
 
-p{
-    font-size: 20px;
-    text-align: center;
-    padding: 0 8px;
-}
 
-h6{
-    padding: 10px 15px;
-    font-size:22px;
+
+.priceCard{
+    padding: 20px 15px;
+    font-size: 25px;
     text-align: center;
-    color: #222f3e;
+    color: #000000;
     margin: 0;
 
 }

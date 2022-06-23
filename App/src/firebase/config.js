@@ -23,3 +23,4 @@ const analytics = getAnalytics(app);
 export default function getFirestoreApp(){
     return app
 }
+
