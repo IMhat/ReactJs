@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Titulo from '../texts/Titulo'
-import logohodlcont from './img/logohodlcont.png';
+import logo from './img/logo.jpg';
 import { setDoc, doc, getFirestore } from 'firebase/firestore';
 
 import './Contacto.css';
